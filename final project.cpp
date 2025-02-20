@@ -92,6 +92,8 @@ int main() {
             cout << "7. Delete a book" << endl;
             cout << "8. Borrow a book" << endl;
             cout << "9. Return a book" << endl;
+             case 10:
+                            break;  // العودة للقائمة الرئيسية
             cin >> book;
     
             switch (book) {
