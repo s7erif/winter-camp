@@ -11,9 +11,14 @@ int main() {
     int En_borrowed_books;
     string username, password;
     bool login_success = false;//login وضع قيمه افتراضيه ل ال
-    cout << "╔════════════════════════════════╗" << endl;
-    cout << "║  📚 Welcome to the Library 📚  ║" << endl;
-    cout << "╚════════════════════════════════╝" << endl;
+#include <iostream>
+    cout << "*****************************************" << endl;
+    cout << "*                                       *" << endl;
+    cout << "*   📖✨ WELCOME TO THE LIBRARY ✨📖   *" << endl;
+    cout << "*                                       *" << endl;
+    cout << "*****************************************" << endl;
+
+
     cout << "1. Sign in | 2. Sign up" << endl;
     cin >> your_choice;
 
