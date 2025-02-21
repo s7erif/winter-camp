@@ -79,8 +79,8 @@ int main() {
     cin >> choice;
 
     if (choice == 1) {
-        do
-        {
+        
+        
             cout << "Hello in English library" << endl;
             cout << "Choose from books:" << endl;
             cout << "1. " << English_books[0] << endl;
@@ -92,10 +92,10 @@ int main() {
             cout << "7. Delete a book" << endl;
             cout << "8. Borrow a book" << endl;
             cout << "9. Return a book" << endl;
-             case 10:
-                            break;  // العودة للقائمة الرئيسية
+            cout << "10. Back to main menu" << endl;
             cin >> book;
-    
+           do
+           {
             switch (book) {
                 case 1:
                     cout << "You chose: " << English_books[0] << endl;
@@ -120,10 +120,14 @@ int main() {
                 case 6: {
                     string new_book;
                     cout << "Enter the name of the book to add: ";
-                    cin.ignore();
                     getline(cin, new_book);
                     English_books.push_back(new_book);
                     cout << "Added: " << new_book << endl;
+                    cout << "Updated book list:" << endl;
+                    for (size_t i = 0; i < English_books.size(); ++i) {
+                        cout << i + 1 << ". " << English_books[i] << endl;
+                    }
+
                     break;
                 }
                 case 7: {
@@ -133,6 +137,11 @@ int main() {
                     if (delete_index >= 1 && delete_index <= English_books.size()) {
                         cout << "Deleted: " << English_books[delete_index - 1] << endl;
                         English_books.erase(English_books.begin() + delete_index - 1);
+                        cout << "Updated book list:" << endl;
+                        for (const string& book : English_books) {
+                            cout << book << endl;
+                                              }
+
                     } else {
                         cout << "Invalid book number!" << endl;
                     }
@@ -212,6 +221,11 @@ int main() {
                     getline(cin, new_book);
                     Arabic_books.push_back(new_book);
                     cout << "Added: " << new_book << endl;
+                    cout << "Updated book list:" << endl;
+                   for (const string& book : Arabic_books) {
+                   cout << book << endl;
+                                           }
+
                     break;
                 }
                 case 7: {
@@ -221,6 +235,11 @@ int main() {
                     if (delete_index >= 1 && delete_index <= Arabic_books.size()) {
                         cout << "Deleted: " << Arabic_books[delete_index - 1] << endl;
                         Arabic_books.erase(Arabic_books.begin() + delete_index - 1);
+                        cout << "Updated book list:" << endl;
+                   for (const string& book : Arabic_books) {
+                    cout << book << endl;
+                    }
+
                     } else {
                         cout << "Invalid book number!" << endl;
                     }
@@ -255,3 +274,4 @@ int main() {
 
     return 0;
 }
+
